@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Book Store</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="book-header">
+      <img
+        src="https://clipart.info/images/ccovers/1484942340ios-emoji-books.png"
+        alt="book-header"
+      />
+    </div>
+
+    <div class="container">
+      <form class="add-book-form" style="">
+        <h3>Create a Book!</h3>
+
+        <input
+          type="text"
+          name="title"
+          value=""
+          placeholder="Enter a book's title"
+          class="input-text"
+        />
+        <br />
+        <input
+          type="text"
+          name="author"
+          value=""
+          placeholder="Enter a book's author"
+          class="input-text"
+        />
+        <br />
+        <input
+          type="number"
+          step="0.01"
+          name="price"
+          value=""
+          placeholder="Enter a book's price"
+          class="input-text"
+        />
+        <br />
+        <input
+          type="text"
+          name="image"
+          value=""
+          placeholder="Enter a book's cover image URL"
+          class="input-text"
+        />
+        <br />
+        <input
+          type="submit"
+          name="submit"
+          value="Create New Book"
+          class="submit"
+        />
+      </form>
+      <br />
+      <select
+        id="sort-dropdown"
+        name="select-sort"
+        onchange="sortBookData(this.value)"
+      >
+        <option selected="selected" value="Sort By:" disabled>Sort By:</option>
+        <option value="Title">Title</option>
+        <option value="Author">Author</option>
+        <option value="Price">Price</option>
+      </select>
+    </div>
+
+    <div id="book-collection"></div>
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
